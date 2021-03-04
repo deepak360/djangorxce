@@ -1,31 +1,49 @@
 # Matrimony Website
 
-# set your git remote upstream
+# Create a virtual environment.
+    python3 -m venv venv
+
+# Activate the virtual environment.
+    source venv/bin/activate
+
+# Install python pip
+    sudo apt-get install python3-pip
+
+# Install django using pip package manager.
+    pip3 install django
+
+# Create django project
+    django-admin startproject <PROJECT-NAME>
+
+# Create a new app inside django project.
+    python3 manage.py startapp <APP-NAME>
+
+# Set your git remote upstream
     git remote add upstream https://github.com/deepak360/djangorxce.git
 
-# pull latest code
+# Pull latest code
     git pull upstream master
 
-# push your branch code
+# Push your branch code
     sudo git push origin WRITE-BRANCH-NAME-HERE
 
-# how to check your current branch
+# How to check your current branch
     git branch
 
-# create new branch
+# Create new branch
     git checkout -b YOUR-BRANCH-NAME
 
-# activate virtual env
+# Activate virtual env
     source env/bin/activate
 
-# locate your project folder
+# Locate your project folder
     cd djangorxce
 
-# install dependencies
+# Install dependencies
     pip3 install -r requirements.txt
 
-# run your django application
+# Run your django application
     python3 manage.py runserver
 
-# create dependencies file (DO NOT RUN BELOW COMMAND)
+# Create dependencies file (DO NOT RUN BELOW COMMAND)
     pip3 freeze > requirements.txt
