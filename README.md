@@ -6,6 +6,9 @@
 # locate your project folder
     cd djangorxce
 
+# run your django application
+    python3 manage.py runserver
+
 # create dependencies file (DO NOT RUN BELOW COMMAND)
     pip3 freeze > requirements.txt
 
