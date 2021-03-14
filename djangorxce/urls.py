@@ -15,9 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls import url
+from rest_framework_swagger.views import get_swagger_view
+schema_view = get_swagger_view(title='Matrimony API')
 
 urlpatterns = [
+    # url(r'', schema_view),
     path('admin/', admin.site.urls),
+    path('api/', include('profiledetail.urls')),
     path('api/', include('api.urls')),
-    path('auth/', include('auth.urls')),
+    # path('auth/', include('auth.urls')),
 ]

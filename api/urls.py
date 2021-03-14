@@ -1,10 +1,9 @@
 from django.urls import path
 from . import views
 from django.conf.urls import url
-from rest_framework_swagger.views import get_swagger_view
-
-schema_view = get_swagger_view(title='Pastebin API')
+from api.views import UserRegistrationView
 
 urlpatterns = [
-    url(r'^$', schema_view),
+    url(r'^signup', UserRegistrationView.as_view(), name='signup_view'),
+    
 ]
